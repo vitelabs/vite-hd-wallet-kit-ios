@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C06FED629FCCD1DC2BB703E /* Pods_Vite_keystore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF35BDAB83752F45907A814 /* Pods_Vite_keystore_Example.framework */; };
+		1C3F09C122F8A8EE9EAE1AAE /* Pods_Vite_keystore_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */; };
+		4C76C6E121363BF1006DECA2 /* DailyCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76C6E021363BF1006DECA2 /* DailyCashViewController.swift */; };
+		4C880F54213D564C0091CE00 /* WalletTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C880F53213D564C0091CE00 /* WalletTest.swift */; };
+		4CE3186121380ED1008B2E4A /* AddressGenerationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */; };
+		4CE3186221380ED1008B2E4A /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185E21380ED1008B2E4A /* CryptoTests.swift */; };
+		4CE3186321380ED1008B2E4A /* KeystoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */; };
+		4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE31879213CE20A008B2E4A /* MnemonicTests.swift */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CE3185021380E8C008B2E4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = "Vite-keystore_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		128C9D738717130EA1EF795B /* Pods_Vite_keystore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vite_keystore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0517B07F17233759F1EDAB /* Pods-Vite-keystore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_Example/Pods-Vite-keystore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3C55554086E6317D96A90429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4C76C6E021363BF1006DECA2 /* DailyCashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCashViewController.swift; sourceTree = "<group>"; };
+		4C880F53213D564C0091CE00 /* WalletTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTest.swift; sourceTree = "<group>"; };
+		4CE3184B21380E8C008B2E4A /* Vite-keystore_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vite-keystore_ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE3184F21380E8C008B2E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressGenerationTests.swift; sourceTree = "<group>"; };
+		4CE3185E21380ED1008B2E4A /* CryptoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoreTests.swift; sourceTree = "<group>"; };
+		4CE31879213CE20A008B2E4A /* MnemonicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* Vite-keystore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vite-keystore_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7AB4D30BBECCFB45C06D0B50 /* Pods-Vite-keystore_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_ExampleTests/Pods-Vite-keystore_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94336CDCB5B15E0A35B3C24B /* Vite-keystore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Vite-keystore.podspec"; path = "../Vite-keystore.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C2166E2C12948E2793F309D /* Pods-Vite-keystore_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_ExampleTests/Pods-Vite-keystore_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vite_keystore_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF35BDAB83752F45907A814 /* Pods_Vite_keystore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vite_keystore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1A270842AAAF08AE3C6315 /* Pods-Vite-keystore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_Example/Pods-Vite-keystore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EF16DCD17FC8A07FFA99FE09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CE3184821380E8C008B2E4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C3F09C122F8A8EE9EAE1AAE /* Pods_Vite_keystore_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C06FED629FCCD1DC2BB703E /* Pods_Vite_keystore_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C90D0F5EC01F3C592F4E217 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A270842AAAF08AE3C6315 /* Pods-Vite-keystore_Example.debug.xcconfig */,
+				1C0517B07F17233759F1EDAB /* Pods-Vite-keystore_Example.release.xcconfig */,
+				7AB4D30BBECCFB45C06D0B50 /* Pods-Vite-keystore_ExampleTests.debug.xcconfig */,
+				9C2166E2C12948E2793F309D /* Pods-Vite-keystore_ExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CE3184C21380E8C008B2E4A /* Vite-keystore_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CE31879213CE20A008B2E4A /* MnemonicTests.swift */,
+				4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */,
+				4CE3185E21380ED1008B2E4A /* CryptoTests.swift */,
+				4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */,
+				4CE3184F21380E8C008B2E4A /* Info.plist */,
+				4C880F53213D564C0091CE00 /* WalletTest.swift */,
+			);
+			path = "Vite-keystore_ExampleTests";
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for Vite-keystore */,
+				4CE3184C21380E8C008B2E4A /* Vite-keystore_ExampleTests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				3C90D0F5EC01F3C592F4E217 /* Pods */,
+				E1BD4AC36A0E5F648AB28515 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD01AFB9204008FA782 /* Vite-keystore_Example.app */,
+				4CE3184B21380E8C008B2E4A /* Vite-keystore_ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACD21AFB9204008FA782 /* Example for Vite-keystore */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				4C76C6E021363BF1006DECA2 /* DailyCashViewController.swift */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+			);
+			name = "Example for Vite-keystore";
+			path = "Vite-keystore";
+			sourceTree = "<group>";
+		};
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				94336CDCB5B15E0A35B3C24B /* Vite-keystore.podspec */,
+				3C55554086E6317D96A90429 /* README.md */,
+				EF16DCD17FC8A07FFA99FE09 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E1BD4AC36A0E5F648AB28515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCF35BDAB83752F45907A814 /* Pods_Vite_keystore_Example.framework */,
+				128C9D738717130EA1EF795B /* Pods_Vite_keystore_Tests.framework */,
+				C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CE3184A21380E8C008B2E4A /* Vite-keystore_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CE3185221380E8C008B2E4A /* Build configuration list for PBXNativeTarget "Vite-keystore_ExampleTests" */;
+			buildPhases = (
+				8A992FF41A040B2F0D4EE6AD /* [CP] Check Pods Manifest.lock */,
+				4CE3184721380E8C008B2E4A /* Sources */,
+				4CE3184821380E8C008B2E4A /* Frameworks */,
+				4CE3184921380E8C008B2E4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CE3185121380E8C008B2E4A /* PBXTargetDependency */,
+			);
+			name = "Vite-keystore_ExampleTests";
+			productName = "Vite-keystore_ExampleTests";
+			productReference = 4CE3184B21380E8C008B2E4A /* Vite-keystore_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607FACCF1AFB9204008FA782 /* Vite-keystore_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vite-keystore_Example" */;
+			buildPhases = (
+				FC213A0104B84474986737F4 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				E2B1FBA47714EEC4A6EB56F5 /* [CP] Embed Pods Frameworks */,
+				4CFA456E2133EF0800B69219 /* ShellScript */,
+				4CFA456F2133EF1A00B69219 /* Run SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vite-keystore_Example";
+			productName = "Vite-keystore";
+			productReference = 607FACD01AFB9204008FA782 /* Vite-keystore_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					4CE3184A21380E8C008B2E4A = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0900;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Vite-keystore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACCF1AFB9204008FA782 /* Vite-keystore_Example */,
+				4CE3184A21380E8C008B2E4A /* Vite-keystore_ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CE3184921380E8C008B2E4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCE1AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CFA456E2133EF0800B69219 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		4CFA456F2133EF1A00B69219 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		8A992FF41A040B2F0D4EE6AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vite-keystore_ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2B1FBA47714EEC4A6EB56F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Vite-keystore_Example/Pods-Vite-keystore_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Vite-keystore/Vite_keystore.framework",
+				"${BUILT_PRODUCTS_DIR}/libEd25519Blake2b/libEd25519Blake2b.framework",
+				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vite_keystore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libEd25519Blake2b.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vite-keystore_Example/Pods-Vite-keystore_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC213A0104B84474986737F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vite-keystore_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CE3184721380E8C008B2E4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C880F54213D564C0091CE00 /* WalletTest.swift in Sources */,
+				4CE3186121380ED1008B2E4A /* AddressGenerationTests.swift in Sources */,
+				4CE3186221380ED1008B2E4A /* CryptoTests.swift in Sources */,
+				4CE3186321380ED1008B2E4A /* KeystoreTests.swift in Sources */,
+				4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCC1AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C76C6E121363BF1006DECA2 /* DailyCashViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CE3185121380E8C008B2E4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* Vite-keystore_Example */;
+			targetProxy = 4CE3185021380E8C008B2E4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CE3185321380E8C008B2E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AB4D30BBECCFB45C06D0B50 /* Pods-Vite-keystore_ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Vite-keystore_ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.water.org.Vite-keystore-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vite-keystore_Example.app/Vite-keystore_Example";
+			};
+			name = Debug;
+		};
+		4CE3185421380E8C008B2E4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C2166E2C12948E2793F309D /* Pods-Vite-keystore_ExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Vite-keystore_ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.water.org.Vite-keystore-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vite-keystore_Example.app/Vite-keystore_Example";
+			};
+			name = Release;
+		};
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF01AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB1A270842AAAF08AE3C6315 /* Pods-Vite-keystore_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Vite-keystore/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		607FACF11AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C0517B07F17233759F1EDAB /* Pods-Vite-keystore_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Vite-keystore/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CE3185221380E8C008B2E4A /* Build configuration list for PBXNativeTarget "Vite-keystore_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CE3185321380E8C008B2E4A /* Debug */,
+				4CE3185421380E8C008B2E4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Vite-keystore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Vite-keystore_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}
