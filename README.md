@@ -1,10 +1,5 @@
 # Vite-keystore
 
-[![CI Status](https://img.shields.io/travis/曹亮/Vite-keystore.svg?style=flat)](https://travis-ci.org/曹亮/Vite-keystore)
-[![Version](https://img.shields.io/cocoapods/v/Vite-keystore.svg?style=flat)](https://cocoapods.org/pods/Vite-keystore)
-[![License](https://img.shields.io/cocoapods/l/Vite-keystore.svg?style=flat)](https://cocoapods.org/pods/Vite-keystore)
-[![Platform](https://img.shields.io/cocoapods/p/Vite-keystore.svg?style=flat)](https://cocoapods.org/pods/Vite-keystore)
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,7 +17,7 @@ pod 'Vite-keystore'
 
 ## Author
 
-曹亮, caoliang02@meituan.com
+Water, caoliang@vite.org
 
 ## License
 
