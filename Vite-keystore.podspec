@@ -19,7 +19,9 @@ TODO: Add long description of the pod here.
   s.dependency 'secp256k1.swift', '~> 0.1.4'
   s.dependency 'CryptoSwift', '~> 0.11'
   s.dependency 'scrypt', '~> 1.5'
-  s.dependency 'libEd25519Blake2b'
+  #s.dependency 'libEd25519Blake2b'
+  s.dependency 'KeychainSwift'
+  s.dependency 'ObjectMapper'
 
   s.pod_target_xcconfig = { 'SWIFT_OPTIMIZATION_LEVEL' => '-Owholemodule' }
 end

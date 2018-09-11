@@ -12,39 +12,7 @@ public struct EIP155Signer {
     
     private let chainID: Int = 1
     
-    public func sign(_ rawTransaction: EthereumRawTransaction, privateKey: PrivateKey) throws -> Data {
-        let transactionHash = try hash(rawTransaction: rawTransaction)
-        let signature = try privateKey.sign(hash: transactionHash)
-        
-        let (r, s, v) = calculateRSV(signature: signature)
-        let encodingArray:[Any] = [
-            rawTransaction.nonce,
-            rawTransaction.gasPrice,
-            rawTransaction.gasLimit,
-            rawTransaction.to.data,
-            rawTransaction.value,
-            rawTransaction.data,
-            v, r, s
-        ]
-        return try RLP.encode(encodingArray)
-    }
-    
-    public func hash(rawTransaction: EthereumRawTransaction) throws -> Data {
-        return Crypto.sha3keccak256(data: try encode(rawTransaction: rawTransaction))
-    }
-    
-    public func encode(rawTransaction: EthereumRawTransaction) throws -> Data {
-        return try RLP.encode([
-            rawTransaction.nonce,
-            rawTransaction.gasPrice,
-            rawTransaction.gasLimit,
-            rawTransaction.to.data,
-            rawTransaction.value,
-            rawTransaction.data,
-            chainID, 0, 0
-        ])
-    }
-    
+
     public func calculateRSV(signature: Data) -> (r: BInt, s: BInt, v: BInt) {
         return (
             r: BInt(str: signature[..<32].toHexString(), radix: 16)!,

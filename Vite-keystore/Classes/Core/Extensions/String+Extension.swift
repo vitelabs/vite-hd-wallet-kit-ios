@@ -10,7 +10,7 @@ import Foundation
 fileprivate var kHexPrefix = "0x"
 
 extension String {
-    //二进制 字符串 头部处理
+    //handle hex 
     public func stripHexPrefix() -> String {
         var hex = self
         if hex.hasPrefix(kHexPrefix) {
