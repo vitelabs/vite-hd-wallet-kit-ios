@@ -9,26 +9,25 @@
 
 import Foundation
 
-// https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
-
-//https://iancoleman.io/bip39/  使用该网站验证结果
+// https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki   Mnemonic prd
+//https://iancoleman.io/bip39/  check Mnemonic by this link
 public final class Mnemonic {
-    //密码强度
+    //pwd strength
     public enum Strength: Int {
-        case weak = 128    //12 个单词
-        case strong = 256  //24 个单词
+        case weak = 128    //12 words
+        case strong = 256  //24 words
     }
 
-    //随机生成密码本
+    //random  create mnemonic  words
     public static func randomGenerator(strength: Strength = .weak, language: MnemonicCodeBook = .english) -> String {
         let byteCount = strength.rawValue  / 8
-        let bytes = Data.randomBytes(length: byteCount)   //随机生成一个熵
+        let bytes = Data.randomBytes(length: byteCount)   //random create entropy
 
         let str = bytes.toHexString()
         return generator(entropy: bytes, language: language)
     }
 
-    //根据data 生成助记词
+    //create mnemonic  words  by data
     public static func generator(entropy: Data, language: MnemonicCodeBook = .english) -> String {
         precondition(entropy.count % 4 == 0 && entropy.count >= 16 && entropy.count <= 32)
 
@@ -55,11 +54,11 @@ public final class Mnemonic {
     public static func createBIP39Seed(mnemonic: String, withPassphrase passphrase: String = "") -> Data {
         precondition(passphrase.count <= 256, "Password too long")
 
-        //助记词
+        //handle mnemonic
         guard let password = mnemonic.decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomalizing password failed in \(self)")
         }
-        //密码加盐
+        //handle password add salt
         guard let salt = ("mnemonic" + passphrase).decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomalizing salt failed in \(self)")
         }

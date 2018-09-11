@@ -25,26 +25,6 @@ public final class Wallet {
         return derivedKey.publicKey.address
     }
     
-    public func generateAccount(at index: UInt32 = 0) -> Account {
-        let address = bip44PrivateKey.derived(at: .notHardened(index))
-        return Account(privateKey: address)
-    }
-    
-    public func generateAccounts(count: UInt32) -> [Account]  {
-        var accounts:[Account] = []
-        for index in 0..<count {
-            accounts.append(generateAccount(at: index))
-        }
-        return accounts
-    }
-    
-    public func sign(rawTransaction: EthereumRawTransaction) throws -> String {
-        let signer = EIP155Signer()
-        let rawData = try signer.sign(rawTransaction, privateKey: privateKey)
-        let hash = rawData.toHexString().addHexPrefix()
-        return hash
-    }
-    
     //MARK: - Private
     //https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
     private var bip44PrivateKey:PrivateKey {
