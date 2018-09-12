@@ -4,8 +4,9 @@ PODS:
   - CryptoSwift (0.11.0)
   - Eureka (4.2.0)
   - KeychainSwift (11.0.0)
-  - libEd25519Blake2b (0.0.1)
-  - scrypt (1.5):
+  - libEd25519Blake2b (0.0.4)
+  - ObjectMapper (3.3.0)
+  - scrypt (1.7):
     - CryptoSwift (~> 0.11)
   - secp256k1.swift (0.1.4)
   - SipHash (1.2.2)
@@ -15,7 +16,9 @@ PODS:
   - Vite-keystore (0.0.1):
     - BigInt (~> 3.0)
     - CryptoSwift (~> 0.11)
-    - libEd25519Blake2b
+    - KeychainSwift
+    - libEd25519Blake2b (~> 0.0.4)
+    - ObjectMapper
     - scrypt (~> 1.5)
     - secp256k1.swift (~> 0.1.4)
 
@@ -38,6 +41,7 @@ SPEC REPOS:
     - Eureka
     - KeychainSwift
     - libEd25519Blake2b
+    - ObjectMapper
     - scrypt
     - secp256k1.swift
     - SipHash
@@ -54,14 +58,15 @@ SPEC CHECKSUMS:
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
   Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
-  libEd25519Blake2b: 14cefcf8c7c9228f3383dabce6f4bca2ff574e12
-  scrypt: 0da45be386be45f857d8545216148e86e753a9a1
+  libEd25519Blake2b: b291b518f4560bf137d8bb81ab3f8855979ece5c
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  scrypt: a828bd579086977f6db7f9798d1c6332ccaaed4e
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  Vite-keystore: e923f322bfcfa2bf25daa7f5bb08917b45118f3c
+  Vite-keystore: 1987ba1387d428a36156ecc845084cf492fbc040
 
 PODFILE CHECKSUM: 8514ef5043659d79269babf1351e258fad7ac71d
 

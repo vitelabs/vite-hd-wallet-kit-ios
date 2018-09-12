@@ -11,14 +11,13 @@
 		1C3F09C122F8A8EE9EAE1AAE /* Pods_Vite_keystore_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */; };
 		4C76C6E121363BF1006DECA2 /* DailyCashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76C6E021363BF1006DECA2 /* DailyCashViewController.swift */; };
 		4C880F54213D564C0091CE00 /* WalletTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C880F53213D564C0091CE00 /* WalletTest.swift */; };
-		4CE3186121380ED1008B2E4A /* AddressGenerationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */; };
-		4CE3186221380ED1008B2E4A /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185E21380ED1008B2E4A /* CryptoTests.swift */; };
 		4CE3186321380ED1008B2E4A /* KeystoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */; };
 		4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE31879213CE20A008B2E4A /* MnemonicTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		8ED4CED9214908290005A82D /* HDBipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4CED8214908290005A82D /* HDBipTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		4C880F53213D564C0091CE00 /* WalletTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTest.swift; sourceTree = "<group>"; };
 		4CE3184B21380E8C008B2E4A /* Vite-keystore_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vite-keystore_ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE3184F21380E8C008B2E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressGenerationTests.swift; sourceTree = "<group>"; };
-		4CE3185E21380ED1008B2E4A /* CryptoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoreTests.swift; sourceTree = "<group>"; };
 		4CE31879213CE20A008B2E4A /* MnemonicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Vite-keystore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vite-keystore_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +47,7 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7AB4D30BBECCFB45C06D0B50 /* Pods-Vite-keystore_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_ExampleTests/Pods-Vite-keystore_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8ED4CED8214908290005A82D /* HDBipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBipTests.swift; sourceTree = "<group>"; };
 		94336CDCB5B15E0A35B3C24B /* Vite-keystore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Vite-keystore.podspec"; path = "../Vite-keystore.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C2166E2C12948E2793F309D /* Pods-Vite-keystore_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vite-keystore_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vite-keystore_ExampleTests/Pods-Vite-keystore_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vite_keystore_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,9 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				4CE31879213CE20A008B2E4A /* MnemonicTests.swift */,
-				4CE3185D21380ED0008B2E4A /* AddressGenerationTests.swift */,
-				4CE3185E21380ED1008B2E4A /* CryptoTests.swift */,
 				4CE3185F21380ED1008B2E4A /* KeystoreTests.swift */,
+				8ED4CED8214908290005A82D /* HDBipTests.swift */,
 				4CE3184F21380E8C008B2E4A /* Info.plist */,
 				4C880F53213D564C0091CE00 /* WalletTest.swift */,
 			);
@@ -324,6 +321,7 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -338,6 +336,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -377,10 +376,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C880F54213D564C0091CE00 /* WalletTest.swift in Sources */,
-				4CE3186121380ED1008B2E4A /* AddressGenerationTests.swift in Sources */,
-				4CE3186221380ED1008B2E4A /* CryptoTests.swift in Sources */,
 				4CE3186321380ED1008B2E4A /* KeystoreTests.swift in Sources */,
 				4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */,
+				8ED4CED9214908290005A82D /* HDBipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

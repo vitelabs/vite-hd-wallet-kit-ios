@@ -9,29 +9,53 @@
 import Foundation
 import ObjectMapper
 
-public struct WalletAccount : Mappable{
+public class WalletAccount : Mappable{
 
     public var mnemonic = ""
     public var password = ""
     public var name = ""
     public var isSwitchTouchId = false
-    public var existAddressIndex = [0]
+    public var addressCount = 1
     public var defaultAddressIndex = 0
 
     public init() {
 
     }
 
-    public init?(map: Map) {
+    public required init?(map: Map) {
 
     }
 
-    public mutating func mapping(map: Map) {
+    public func mapping(map: Map) {
         mnemonic    <- map["mnemonic"]
         password    <- map["password"]
         name    <- map["name"]
         isSwitchTouchId    <- map["isSwitchTouchId"]
-        existAddressIndex    <- map["existAddressIndex"]
+        addressCount    <- map["addressCount"]
         defaultAddressIndex    <- map["defaultAddressIndex"]
+    }
+
+    // lazy
+    public lazy var existKeys: [Key] = {
+        let seed = Mnemonic.createBIP39Seed(mnemonic: mnemonic).toHexString()
+        let keys = NSMutableArray()
+        for index in 0..<addressCount {
+            let path = "\(HDBip.viteAccountPrefix)/\(index-1)'"
+            if let (secretKey, publicKey, address) = HDBip.accountsForIndex(index, seed: seed) {
+                let key = Key(secretKey: secretKey, publicKey: publicKey, address: address)
+                keys.add(key)
+            }
+        }
+        return keys as! Array<Key>
+    }()
+
+    public lazy var defaultKey = existKeys[defaultAddressIndex]
+}
+
+extension WalletAccount {
+    public struct Key {
+        public var secretKey: String
+        public var publicKey: String
+        public var address: String
     }
 }

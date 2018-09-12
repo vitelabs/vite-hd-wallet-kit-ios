@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CryptoSwift
 
 @testable import Vite_keystore
 
