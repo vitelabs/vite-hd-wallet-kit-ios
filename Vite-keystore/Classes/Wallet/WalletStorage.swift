@@ -34,20 +34,34 @@ public class WalletStorage {
             walletAccounts = walletAccount!
         }
     }
+
+    public func login(replace: WalletAccount) {
+        for (index , item) in walletAccounts.enumerated()
+        {
+            if (item.mnemonic == replace.mnemonic){
+                walletAccounts.remove(at: index)
+                walletAccounts.insert(replace, at: 0)
+                return
+            }
+        }
+    }
+
     public func update(account: WalletAccount) {
         handleWalletByAccount(replace: account)
-
-        keychain.set(walletAccounts.toJSONString()!, forKey: walletAccountsKey, withAccess:defaultKeychainAccess)
-
+        self.storeAllWallets()
     }
 
     public func add(account: WalletAccount){
         walletAccounts.append(account)
-        keychain.set(walletAccounts.toJSONString()!, forKey: walletAccountsKey, withAccess:defaultKeychainAccess)
+        self.storeAllWallets()
     }
 
     public func delete(account: WalletAccount) {
         delWalletByAccount(del: account)
+        self.storeAllWallets()
+    }
+
+    public func storeAllWallets(){
         keychain.set(walletAccounts.toJSONString()!, forKey: walletAccountsKey, withAccess:defaultKeychainAccess)
     }
 

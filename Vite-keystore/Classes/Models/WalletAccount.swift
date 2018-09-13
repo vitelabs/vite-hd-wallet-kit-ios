@@ -14,7 +14,12 @@ public class WalletAccount : Mappable{
     public var mnemonic = ""
     public var password = ""
     public var name = ""
+
+    //iphone touchId switch
     public var isSwitchTouchId = false
+
+    //account is or not login, in order to use it
+    public var isLogin = false
     public var addressCount = 1 {
         didSet {
             existKeys = generateExistKeys()
@@ -35,6 +40,7 @@ public class WalletAccount : Mappable{
         password    <- map["password"]
         name    <- map["name"]
         isSwitchTouchId    <- map["isSwitchTouchId"]
+        isLogin    <- map["isLogin"]
         addressCount    <- map["addressCount"]
         defaultAddressIndex    <- map["defaultAddressIndex"]
     }
