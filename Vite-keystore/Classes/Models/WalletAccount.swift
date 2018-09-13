@@ -15,7 +15,11 @@ public class WalletAccount : Mappable{
     public var password = ""
     public var name = ""
     public var isSwitchTouchId = false
-    public var addressCount = 1
+    public var addressCount = 1 {
+        didSet {
+            existKeys = generateExistKeys()
+        }
+    }
     public var defaultAddressIndex = 0
 
     public init() {
@@ -35,8 +39,35 @@ public class WalletAccount : Mappable{
         defaultAddressIndex    <- map["defaultAddressIndex"]
     }
 
-    // lazy
-    public lazy var existKeys: [Key] = {
+    public lazy var existKeys: [Key] = self.generateExistKeys()
+    public var defaultKey: Key { return existKeys[defaultAddressIndex] }
+}
+
+extension WalletAccount {
+    public struct Key {
+        public var secretKey: String
+        public var publicKey: String
+        public var address: String
+    }
+
+    public var canGenerateAddress: Bool {
+        return addressCount < 10
+    }
+
+    public func generateAddress() {
+        if canGenerateAddress {
+            addressCount += 1
+            // TODO: need to save
+        }
+    }
+
+    public func setDefaultAddressIndex(_ index: Int) {
+        if index < addressCount {
+            defaultAddressIndex = index
+        }
+    }
+
+    fileprivate func generateExistKeys() -> [Key] {
         let seed = Mnemonic.createBIP39Seed(mnemonic: mnemonic).toHexString()
         let keys = NSMutableArray()
         for index in 0..<addressCount {
@@ -47,15 +78,5 @@ public class WalletAccount : Mappable{
             }
         }
         return keys as! Array<Key>
-    }()
-
-    public lazy var defaultKey = existKeys[defaultAddressIndex]
-}
-
-extension WalletAccount {
-    public struct Key {
-        public var secretKey: String
-        public var publicKey: String
-        public var address: String
     }
 }
