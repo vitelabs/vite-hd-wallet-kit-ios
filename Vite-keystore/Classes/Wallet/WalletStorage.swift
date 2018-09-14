@@ -10,8 +10,7 @@ import Foundation
 import KeychainSwift
 import ObjectMapper
 
-public class WalletStorage {
-    public static let shareInstance = WalletStorage()
+public class WalletStorage : NSObject{
 
     let keychain = KeychainSwift.init(keyPrefix: "vite")
 
@@ -20,9 +19,10 @@ public class WalletStorage {
     private let walletAccountsKey = "walletAccounts"
     public var walletAccounts:[WalletAccount] = []
 
-    init() {
+    public override  init() {
+        super.init()
         keychain.synchronizable = true
-        fetch()
+        self.fetch()
     }
 
     public func fetch() {
