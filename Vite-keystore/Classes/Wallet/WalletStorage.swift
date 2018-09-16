@@ -84,4 +84,9 @@ public class WalletStorage : NSObject{
             }
         }
     }
+
+    public func delAllWallet () {
+        walletAccounts = []
+        storeAllWallets()
+    }
 }
