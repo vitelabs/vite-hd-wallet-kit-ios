@@ -19,7 +19,7 @@ TODO: Add long description of the pod here.
   s.dependency 'secp256k1.swift', '~> 0.1.4'
   s.dependency 'CryptoSwift', '~> 0.11'
   s.dependency 'scrypt', '~> 1.5'
-  s.dependency 'libEd25519Blake2b', '~> 0.0.4'
+  s.dependency 'libEd25519Blake2b', '~> 0.0.6'
   s.dependency 'KeychainSwift'
   s.dependency 'ObjectMapper'
 
