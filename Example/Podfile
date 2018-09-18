@@ -2,17 +2,8 @@ use_frameworks!
 
 target 'Vite-keystore_Example' do
   pod 'Vite-keystore', :path => '../'
-  pod 'KeychainSwift'
   pod 'SwiftLint'
-  pod 'SnapKit', '~> 4.0.0'
-  pod 'Eureka'
-
-#  pod 'secp256k1_ios', git: 'https://github.com/shamatar/secp256k1_ios.git', inhibit_warnings: true
-
-
-  pod 'SVProgressHUD'
-  pod 'libEd25519Blake2b'
-
+  pod 'SnapKit'
 
   target 'Vite-keystore_ExampleTests' do
     inherit! :search_paths

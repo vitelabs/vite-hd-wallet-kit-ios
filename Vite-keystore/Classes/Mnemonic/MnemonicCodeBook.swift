@@ -18,7 +18,7 @@ public enum MnemonicCodeBook {
     case spanish
     case french
     case italian
-    
+
     public var words: [String] {
         switch self {
             case .english:
@@ -40,5 +40,3 @@ public enum MnemonicCodeBook {
         }
     }
 }
-    
-

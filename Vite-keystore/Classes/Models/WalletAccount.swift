@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-public class WalletAccount : Mappable{
+public class WalletAccount: Mappable {
 
     public var uuid = UUID().uuidString
     public var mnemonic = ""

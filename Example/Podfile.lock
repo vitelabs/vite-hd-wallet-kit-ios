@@ -2,14 +2,11 @@ PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
   - CryptoSwift (0.12.0)
-  - Eureka (4.2.0)
   - KeychainSwift (11.0.0)
   - libEd25519Blake2b (0.0.6)
   - ObjectMapper (3.3.0)
-  - secp256k1.swift (0.1.4)
   - SipHash (1.2.2)
   - SnapKit (4.0.0)
-  - SVProgressHUD (2.2.5)
   - SwiftLint (0.27.0)
   - Vite-keystore (0.0.1):
     - BigInt (~> 3.0)
@@ -17,14 +14,9 @@ PODS:
     - KeychainSwift
     - libEd25519Blake2b (~> 0.0.6)
     - ObjectMapper
-    - secp256k1.swift (~> 0.1.4)
 
 DEPENDENCIES:
-  - Eureka
-  - KeychainSwift
-  - libEd25519Blake2b
-  - SnapKit (~> 4.0.0)
-  - SVProgressHUD
+  - SnapKit
   - SwiftLint
   - Vite-keystore (from `../`)
 
@@ -32,14 +24,11 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BigInt
     - CryptoSwift
-    - Eureka
     - KeychainSwift
     - libEd25519Blake2b
     - ObjectMapper
-    - secp256k1.swift
     - SipHash
     - SnapKit
-    - SVProgressHUD
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -49,17 +38,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   libEd25519Blake2b: e73e268d598795e86d75094c6d7ed11c457cd067
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  Vite-keystore: 8440a5207f0bdfd8ad6e55026b69ca860cb012e7
+  Vite-keystore: 7067da9e87220f31c8378bc7b6424c8c2775510a
 
-PODFILE CHECKSUM: ee93509644f31290ab769fb778ea3d179c8794c7
+PODFILE CHECKSUM: 7ddace9314f2ddc92f0a351c8a0f8ec6868a030e
 
 COCOAPODS: 1.5.3

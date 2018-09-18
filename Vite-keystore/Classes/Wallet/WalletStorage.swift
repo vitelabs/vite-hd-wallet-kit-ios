@@ -10,14 +10,13 @@ import Foundation
 import KeychainSwift
 import ObjectMapper
 
-public class WalletStorage : NSObject{
+public class WalletStorage: NSObject {
 
     let keychain = KeychainSwift.init(keyPrefix: "vite")
 
-
     private let defaultKeychainAccess: KeychainSwiftAccessOptions = .accessibleAlways
     private let walletAccountsKey = "walletAccounts"
-    public var walletAccounts:[WalletAccount] = []
+    public var walletAccounts: [WalletAccount] = []
 
     public override  init() {
         super.init()
@@ -26,19 +25,18 @@ public class WalletStorage : NSObject{
     }
 
     public func fetch() {
-        var data =  keychain.get(walletAccountsKey)
+        let data =  keychain.get(walletAccountsKey)
         if (data == nil || (data?.isEmpty)!) {
             walletAccounts = []
-        }else{
-            var walletAccount = Mapper<WalletAccount>().mapArray(JSONString: data!)
+        } else {
+            let walletAccount = Mapper<WalletAccount>().mapArray(JSONString: data!)
             walletAccounts = walletAccount!
         }
     }
 
     public func login(replace: WalletAccount) {
-        for (index , item) in walletAccounts.enumerated()
-        {
-            if (item.mnemonic == replace.mnemonic){
+        for (index, item) in walletAccounts.enumerated() {
+            if (item.mnemonic == replace.mnemonic) {
                 walletAccounts.remove(at: index)
                 walletAccounts.insert(replace, at: 0)
                 return
@@ -51,7 +49,7 @@ public class WalletStorage : NSObject{
         self.storeAllWallets()
     }
 
-    public func add(account: WalletAccount){
+    public func add(account: WalletAccount) {
         walletAccounts.append(account)
         self.storeAllWallets()
     }
@@ -61,25 +59,25 @@ public class WalletStorage : NSObject{
         self.storeAllWallets()
     }
 
-    public func storeAllWallets(){
-        keychain.set(walletAccounts.toJSONString()!, forKey: walletAccountsKey, withAccess:defaultKeychainAccess)
+    public func storeAllWallets() {
+        keychain.set(walletAccounts.toJSONString()!, forKey: walletAccountsKey, withAccess: defaultKeychainAccess)
     }
 
-    func handleWalletByAccount(replace: WalletAccount)  {
-        walletAccounts.map {  (account) -> WalletAccount in
-            if (account.mnemonic == replace.mnemonic){
+    func handleWalletByAccount(replace: WalletAccount) {
+       _ = walletAccounts.map {  (account) -> WalletAccount in
+            if (account.mnemonic == replace.mnemonic) {
                 return replace
-            }else{
+            } else {
                 return account
             }
         }
     }
 
-    func delWalletByAccount(del: WalletAccount)  {
-        walletAccounts.filter { (account) -> Bool in
-            if (account.mnemonic == del.mnemonic){
+    func delWalletByAccount(del: WalletAccount) {
+        _ = walletAccounts.filter { (account) -> Bool in
+            if (account.mnemonic == del.mnemonic) {
                 return false
-            }else{
+            } else {
                 return true
             }
         }

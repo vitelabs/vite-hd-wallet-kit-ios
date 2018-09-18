@@ -13,7 +13,7 @@ import BigInt
 public struct HDBip {
     public struct Key {
         var key: [UInt8]
-        var chainCode : [UInt8]
+        var chainCode: [UInt8]
 
         public func derive(index: UInt32) -> Key? {
             guard index >= HDBip.virstHardenedIndex else { return nil }
@@ -27,8 +27,6 @@ public struct HDBip {
             guard let sum = try? hmac.authenticate(bytes) else { return nil }
             return Key(key: Array(sum[0..<32]), chainCode: Array(sum[32..<64]))
         }
-
-
 
         public func stringPair() -> (seed: String, address: String)? {
 
@@ -48,12 +46,10 @@ public struct HDBip {
 
     static let seedModifier = Array("ed25519 blake2b seed".utf8)
 
-
     static let viteAccountPrefix = "m/44'/999'"
     static let vitePrimaryAccountPath = "m/44'/999'/0'"
     static let viteAccountPathFormat  = "m/44'/999'/%d'"
     static let virstHardenedIndex     = UInt32(1 << 31) // bip 44, hardened child key mast begin with 2^32
-
 
     public static func masterKey(seed: Bytes) -> Key? {
         let hmac = HMAC(key: HDBip.seedModifier, variant: .sha512)
@@ -63,11 +59,9 @@ public struct HDBip {
 
     public static func isValidPath(path: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: "^m(\\/[0-9]+')+$", options: .caseInsensitive) else { fatalError() }
-        let matches = regex.matches(in: path, options: [], range: NSMakeRange(0, path.count))
+        let matches = regex.matches(in: path, options: [], range: NSRange(location: 0, length: path.count))
         return matches.count > 0
     }
-
-
 
     public static func deriveForPath(path: String, seed: Bytes) -> Key? {
         guard isValidPath(path: path) else { return nil }

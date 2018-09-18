@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Water. All rights reserved.
 //
 
-
 import UIKit
 import SnapKit
 import Vite_keystore
@@ -31,7 +30,6 @@ class ViewController: UIViewController {
     }
 
     @objc func walletManageBtnAction() {
-        let dailyCashVC = DailyCashViewController()
-        self.navigationController?.pushViewController(dailyCashVC, animated: true)
+
     }
 }

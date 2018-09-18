@@ -19,9 +19,6 @@ opt_in_rules:
   - vertical_parameter_alignment_on_call
 included:
   - Vite-keystore
-excluded:
-  - Vite/Vendors
-  - Vite/R.generated.swift
 function_parameter_count:
   warning: 20
   error: 25

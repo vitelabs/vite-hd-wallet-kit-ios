@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Water. All rights reserved.
 //
 
-
 import Foundation
 
 // https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki   Mnemonic prd
@@ -22,8 +21,6 @@ public final class Mnemonic {
     public static func randomGenerator(strength: Strength = .weak, language: MnemonicCodeBook = .english) -> String {
         let byteCount = strength.rawValue  / 8
         let bytes = Data.randomBytes(length: byteCount)   //random create entropy
-
-        let str = bytes.toHexString()
         return generator(entropy: bytes, language: language)
     }
 
@@ -34,10 +31,10 @@ public final class Mnemonic {
         let entropybits = String(entropy.flatMap { ("00000000" + String($0, radix: 2)).suffix(8) })
         let hashBits = String(entropy.sha256().flatMap { ("00000000" + String($0, radix: 2)).suffix(8) })
         let checkSum = String(hashBits.prefix((entropy.count * 8) / 32))
-        
+
         let words = language.words
         let concatenatedBits = entropybits + checkSum
-        
+
         var mnemonic: [String] = []
         for index in 0..<(concatenatedBits.count / 11) {
             let startIndex = concatenatedBits.index(concatenatedBits.startIndex, offsetBy: index * 11)
@@ -46,7 +43,7 @@ public final class Mnemonic {
 
             mnemonic.append(String(words[wordIndex]))
         }
-        
+
         return mnemonic.joined(separator: " ")
     }
 
@@ -62,8 +59,7 @@ public final class Mnemonic {
         guard let salt = ("mnemonic" + passphrase).decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomalizing salt failed in \(self)")
         }
-        
+
         return Crypto.PBKDF2SHA512(password: password.bytes, salt: salt.bytes)
     }
 }
-

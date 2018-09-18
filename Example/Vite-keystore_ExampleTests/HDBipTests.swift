@@ -12,7 +12,7 @@ import CryptoSwift
 @testable import libEd25519Blake2b
 
 class HDBipTests: XCTestCase {
-    
+
     func test() {
         let seed = "899b4ee8ce42e2c090f28d3523279e2bdfe6b868b5742f2398db9af26e854d4457f61410ad0dd292e6db75e65efcb2d341ad5e330abb683c60bf7d1c793c463f".hex2Bytes
 

@@ -48,7 +48,7 @@ class MnemonicTests: XCTestCase {
             "105f8de5c554d67f38f305ec5d7e65ab54c34de406b4ba35312b1e1c11764e75474eec92a95a802c1d189789923937cf56fa8753bdf892210f30ae65bb790316"
         )
     }
-    
+
     func testKoreanGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .korean)
         XCTAssertEqual(
@@ -63,7 +63,7 @@ class MnemonicTests: XCTestCase {
         )
 
     }
-    
+
     func testFrenchGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .french)
         XCTAssertEqual(
@@ -78,7 +78,7 @@ class MnemonicTests: XCTestCase {
         )
 
     }
-    
+
     func testItalianGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .italian)
         XCTAssertEqual(
@@ -92,7 +92,7 @@ class MnemonicTests: XCTestCase {
         )
 
     }
-    
+
     func testSimplifiedChineseGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .simplifiedChinese)
         XCTAssertEqual(
@@ -106,7 +106,7 @@ class MnemonicTests: XCTestCase {
         )
 
     }
-    
+
     func testTraditionalChineseGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .traditionalChinese)
         XCTAssertEqual(
@@ -119,7 +119,7 @@ class MnemonicTests: XCTestCase {
             "3d580509ec61af79e970af889840c6dd937937af8904a7b2cf8fb6b068312895eb0807674de0dc708fc075ed0838a7c3e959f1671aed9df81f5c13af528a0b67"
         )
     }
-    
+
     func testSpanishGeneration() {
         let mnemonic = Mnemonic.generator(entropy: entropy, language: .spanish)
         XCTAssertEqual(
