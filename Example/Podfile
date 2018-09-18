@@ -11,16 +11,7 @@ target 'Vite-keystore_Example' do
 
 
   pod 'SVProgressHUD'
-
-
-
-pod 'secp256k1.swift', '~> 0.1.4'
-pod 'CryptoSwift', '~> 0.11'
-pod 'scrypt', '~> 1.5'
-
-
-
-pod 'libEd25519Blake2b'
+  pod 'libEd25519Blake2b'
 
 
   target 'Vite-keystore_ExampleTests' do
