@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 // https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki   Mnemonic prd
 //https://iancoleman.io/bip39/  check Mnemonic by this link
 public final class Mnemonic {
@@ -62,4 +63,21 @@ public final class Mnemonic {
 
         return Crypto.PBKDF2SHA512(password: password.bytes, salt: salt.bytes)
     }
+
+    /// Determines if a mnemonic string is valid.
+    ///
+    /// - Parameter string: mnemonic string
+    /// - Returns: `true` if the string is valid; `false` otherwise.
+    public static func mnemonic_check(_ mnemonicStr: String) -> Bool {
+        if mnemonicStr.isEmpty {
+            return false
+        }
+        let mnemonicWordsList = mnemonicStr.components(separatedBy: " ")
+
+        let data = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.english.words)
+
+        return data != nil
+    }
 }
+
+

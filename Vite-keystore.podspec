@@ -13,14 +13,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'Vite-keystore/Classes/**/*'
+  s.public_header_files = 'Vite-keystore/Classes/Core/Crypto/Bit.h'
 
   s.frameworks = 'UIKit', 'Security'
   s.dependency 'BigInt', '~> 3.0'
-#  s.dependency 'secp256k1.swift', '~> 0.1.4'
   s.dependency 'CryptoSwift', '~> 0.12.0'
   s.dependency 'libEd25519Blake2b', '~> 0.0.6'
   s.dependency 'KeychainSwift'
   s.dependency 'ObjectMapper'
-
   s.pod_target_xcconfig = { 'SWIFT_OPTIMIZATION_LEVEL' => '-Owholemodule' }
 end

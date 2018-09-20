@@ -8,7 +8,6 @@
 
 import XCTest
 import CryptoSwift
-
 @testable import Vite_keystore
 
 class MnemonicTests: XCTestCase {
@@ -134,4 +133,56 @@ class MnemonicTests: XCTestCase {
         )
     }
 
+    func testMnemonicVaild() {
+        let mnemonic = "tiny swamp square question senior please okay foil minimum shift ride celery impact token myth train error toward buzz crucial what page dish empower"
+
+        let result = Mnemonic.mnemonic_check(mnemonic)
+
+        let mnemonic1 = "tiny swamp square question senior please okay foil minimum shift ride celery impact token myth train error toward buzz crucial what page dish empeeeeeower"
+        let result1 = Mnemonic.mnemonic_check(mnemonic1)
+
+        let mnemonic2 = "tiny swamp square question senior please okay foil minimum shift ride celery impact token swamp train error toward buzz crucial what page dish empower"
+        let result2 = Mnemonic.mnemonic_check(mnemonic2)
+
+        let mnemonic3 = "diet canal uncover human manage shallow monkey spot embark knee copper exist kit click female banner slim scheme obtain symptom joke mutual bomb robust"
+        let result3 = Mnemonic.mnemonic_check(mnemonic3)
+
+        let phrases = [
+            "",
+            "degree rain",
+            "degree rain vendor coffee push math onion inside pyramid blush stick",
+            "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo",
+            "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo vote vote vote vote",
+            ]
+
+        let dd =  "degree rain vendor coffee push math onion inside pyramid blush stick"
+        let dddd = Mnemonic.mnemonic_check(dd)
+        XCTAssertEqual(
+            dddd,false
+        )
+
+        for phrase in phrases {
+            let  phraseResult = Mnemonic.mnemonic_check(phrase)
+
+            print(phraseResult)
+            XCTAssertEqual(
+                phraseResult,false
+            )
+        }
+
+
+        XCTAssertEqual(
+            result,true
+        )
+        XCTAssertEqual(
+            result1,false
+        )
+        XCTAssertEqual(
+            result2,false
+        )
+        XCTAssertEqual(
+            result3,true
+        )
+
+    }
 }
