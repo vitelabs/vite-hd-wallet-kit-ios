@@ -44,6 +44,15 @@ public class WalletStorage: NSObject {
         }
     }
 
+    public func isExist(_ accout: WalletAccount) ->(Bool){
+        for (index, item) in walletAccounts.enumerated() {
+            if (item.mnemonic == accout.mnemonic) {
+                return true
+            }
+        }
+        return false
+    }
+
     public func update(account: WalletAccount) {
         handleWalletByAccount(replace: account)
         self.storeAllWallets()
