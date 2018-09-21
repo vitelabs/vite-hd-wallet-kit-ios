@@ -10,6 +10,7 @@
 		0C06FED629FCCD1DC2BB703E /* Pods_Vite_keystore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF35BDAB83752F45907A814 /* Pods_Vite_keystore_Example.framework */; };
 		1C3F09C122F8A8EE9EAE1AAE /* Pods_Vite_keystore_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C224BF24E7F03E590A397108 /* Pods_Vite_keystore_ExampleTests.framework */; };
 		4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE31879213CE20A008B2E4A /* MnemonicTests.swift */; };
+		4CFD6CC72154DB2B00437F33 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD6CC62154DB2B00437F33 /* CryptoTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -34,6 +35,7 @@
 		4CE3184B21380E8C008B2E4A /* Vite-keystore_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vite-keystore_ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE3184F21380E8C008B2E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE31879213CE20A008B2E4A /* MnemonicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicTests.swift; sourceTree = "<group>"; };
+		4CFD6CC62154DB2B00437F33 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Vite-keystore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vite-keystore_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				4CE31879213CE20A008B2E4A /* MnemonicTests.swift */,
 				8ED4CED8214908290005A82D /* HDBipTests.swift */,
 				4CE3184F21380E8C008B2E4A /* Info.plist */,
+				4CFD6CC62154DB2B00437F33 /* CryptoTests.swift */,
 			);
 			path = "Vite-keystore_ExampleTests";
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE3187A213CE20A008B2E4A /* MnemonicTests.swift in Sources */,
+				4CFD6CC72154DB2B00437F33 /* CryptoTests.swift in Sources */,
 				8ED4CED9214908290005A82D /* HDBipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

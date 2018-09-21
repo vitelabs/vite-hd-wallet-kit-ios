@@ -18,4 +18,9 @@ final class Crypto {
         }
         return Data(output)
     }
+
+    /// Computes the Ethereum hash of a block of data (SHA3 Keccak 256 version).
+    static func sha3keccak256(_ data: Data) -> Data {
+          return Data(bytes: SHA3(variant: .keccak256).calculate(for: data.bytes))
+    }
 }
