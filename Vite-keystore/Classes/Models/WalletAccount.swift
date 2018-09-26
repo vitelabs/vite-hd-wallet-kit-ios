@@ -17,8 +17,8 @@ public class WalletAccount: Mappable {
     public var name = ""
 
     //iphone touchId switch
-    public var isSwitchTouchId = false
     public var isSwitchPwd = false
+    public var isSwitchTouchId = false
     public var isSwitchTransfer = true
 
     //account is or not login, in order to use it
