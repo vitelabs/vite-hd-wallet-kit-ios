@@ -18,6 +18,8 @@ public class WalletAccount: Mappable {
 
     //iphone touchId switch
     public var isSwitchTouchId = false
+    public var isSwitchPwd = false
+    public var isSwitchTransfer = true
 
     //account is or not login, in order to use it
     public var isLogin = false
@@ -36,6 +38,8 @@ public class WalletAccount: Mappable {
         password    <- map["password"]
         name    <- map["name"]
         isSwitchTouchId    <- map["isSwitchTouchId"]
+        isSwitchPwd    <- map["isSwitchPwd"]
+        isSwitchTransfer    <- map["isSwitchTransfer"]
         isLogin    <- map["isLogin"]
     }
 }
