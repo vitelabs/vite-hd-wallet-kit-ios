@@ -46,9 +46,9 @@ public struct HDBip {
 
     static let seedModifier = Array("ed25519 blake2b seed".utf8)
 
-    static let viteAccountPrefix = "m/44'/999'"
-    static let vitePrimaryAccountPath = "m/44'/999'/0'"
-    static let viteAccountPathFormat  = "m/44'/999'/%d'"
+    static let viteAccountPrefix = "m/44'/666666'"
+    static let vitePrimaryAccountPath = "m/44'/666666'/0'"
+    static let viteAccountPathFormat  = "m/44'/666666'/%d'"
     static let virstHardenedIndex     = UInt32(1 << 31) // bip 44, hardened child key mast begin with 2^32
 
     public static func masterKey(seed: Bytes) -> Key? {
