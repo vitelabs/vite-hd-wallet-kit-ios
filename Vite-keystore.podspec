@@ -18,7 +18,7 @@ TODO: Add long description of the pod here.
   s.frameworks = 'UIKit', 'Security'
   s.dependency 'BigInt', '~> 3.0'
   s.dependency 'CryptoSwift', '~> 0.12.0'
-  s.dependency 'libEd25519Blake2b', '~> 0.0.6'
+  s.dependency 'TrezorCryptoEd25519WithBlake2b', '~> 0.0.1'
   s.dependency 'KeychainSwift'
   s.dependency 'ObjectMapper'
   s.pod_target_xcconfig = { 'SWIFT_OPTIMIZATION_LEVEL' => '-Owholemodule' }

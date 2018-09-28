@@ -3,17 +3,17 @@ PODS:
     - SipHash (~> 1.2)
   - CryptoSwift (0.12.0)
   - KeychainSwift (11.0.0)
-  - libEd25519Blake2b (0.0.6)
   - ObjectMapper (3.3.0)
   - SipHash (1.2.2)
   - SnapKit (4.0.0)
   - SwiftLint (0.27.0)
+  - TrezorCryptoEd25519WithBlake2b (0.0.1)
   - Vite-keystore (0.0.1):
     - BigInt (~> 3.0)
     - CryptoSwift (~> 0.12.0)
     - KeychainSwift
-    - libEd25519Blake2b (~> 0.0.6)
     - ObjectMapper
+    - TrezorCryptoEd25519WithBlake2b (~> 0.0.1)
 
 DEPENDENCIES:
   - SnapKit
@@ -25,11 +25,11 @@ SPEC REPOS:
     - BigInt
     - CryptoSwift
     - KeychainSwift
-    - libEd25519Blake2b
     - ObjectMapper
     - SipHash
     - SnapKit
     - SwiftLint
+    - TrezorCryptoEd25519WithBlake2b
 
 EXTERNAL SOURCES:
   Vite-keystore:
@@ -39,12 +39,12 @@ SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
-  libEd25519Blake2b: e73e268d598795e86d75094c6d7ed11c457cd067
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  Vite-keystore: 1370cda4689863da3117174f318b14fb656ade55
+  TrezorCryptoEd25519WithBlake2b: e70fc022094a2f2aa8b86117ab1085d7a7b62098
+  Vite-keystore: 879526e1d8e9965ef6a696b98f8ff845d224dfdb
 
 PODFILE CHECKSUM: 7ddace9314f2ddc92f0a351c8a0f8ec6868a030e
 

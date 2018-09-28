@@ -7,7 +7,6 @@
 //
 
 import CryptoSwift
-import libEd25519Blake2b
 import BigInt
 
 public struct EthereumAddress {
