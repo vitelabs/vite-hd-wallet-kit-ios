@@ -8,7 +8,7 @@
 
 import XCTest
 import CryptoSwift
-@testable import Vite_keystore
+@testable import Vite_HDWalletKit
 
 class MnemonicTests: XCTestCase {
     let entropy = Data(hex: "e27b674dd7cc3b4ce67ad38d18bae592871dc7e4a7384cdcc07e1a3f9d3dcfca")

@@ -8,7 +8,7 @@
 
 import XCTest
 import CryptoSwift
-@testable import Vite_keystore
+@testable import Vite_HDWalletKit
 
 class CryptoTests: XCTestCase {
     func testSHA3Keccak256() {

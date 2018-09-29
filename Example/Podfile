@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'Vite-keystore_Example' do
-  pod 'Vite-keystore', :path => '../'
+  pod 'Vite_HDWalletKit', :path => '../'
   pod 'SwiftLint'
   pod 'SnapKit'
 

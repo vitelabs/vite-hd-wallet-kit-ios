@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Water. All rights reserved.
 //
 import UIKit
-import Vite_keystore
+import Vite_HDWalletKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

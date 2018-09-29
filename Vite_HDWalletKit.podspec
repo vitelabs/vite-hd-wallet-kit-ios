@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
-  s.name             = 'Vite-keystore'
-  s.version          = '0.0.1'
-  s.summary          = 'vite 密钥库'
+  s.name             = 'Vite_HDWalletKit'
+  s.version          = '1.0.0'
+  s.summary          = 'Vite App HD wallet kit'
   s.homepage         = 'https://github.com/vitelabs/vite-keystore-ios'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Vite wallet is a swift framework that you  can  create mnemonic words ,bip public key ,address
                        DESC
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Water' => 'caoliang@vite.org' }
