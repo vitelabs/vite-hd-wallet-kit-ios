@@ -1,5 +1,5 @@
-# Vite-HDWalletKit
-Vite-HDWalletKit  is a swift framework that you  can  create mnemonic words ,bip public key ,address 
+# Vite_HDWalletKit
+Vite_HDWalletKit  is a swift framework that you  can  create mnemonic words ,bip public key ,address 
 
 You can check if the mnemonic generation is working right [here](https://iancoleman.io/bip39/).
 
@@ -13,7 +13,7 @@ You can check if the mnemonic generation is working right [here](https://iancole
 ## Installation
 ### CocoaPods
 <p>To integrate HDWalletKit into your Xcode project using <a href="http://cocoapods.org">CocoaPods</a>, specify it in your <code>Podfile</code>:</p>
-<pre><code class="ruby language-ruby">pod 'Vite-HDWalletKit'</code></pre>
+<pre><code class="ruby language-ruby">pod 'Vite_HDWalletKit'</code></pre>
 
 ## How to use
 #### Generate seed and convert it to mnemonic sentence.
@@ -39,4 +39,4 @@ let masterPrivateKey = PrivateKey(seed: seed, network: .main)
 ```
 
 ## License
-WalletKit is released under the [MIT License](https://github.com/essentiaone/HDWallet/blob/develop/LICENSE).
+Vite_HDWalletKit is released under the [MIT License](https://github.com/essentiaone/HDWallet/blob/develop/LICENSE).
