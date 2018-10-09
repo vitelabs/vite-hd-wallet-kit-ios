@@ -48,6 +48,12 @@ public final class Mnemonic {
         return mnemonic.joined(separator: " ")
     }
 
+    //mnemonic to entropy
+    public static func mnemonicsToEntropy(_ mnemonics: String, language: MnemonicCodeBook = .english) -> Data? {
+        let mnemonicWordsList = mnemonics.components(separatedBy: " ")
+        return Bit.entropy(fromWords: mnemonicWordsList, wordLists: language.words)
+    }
+
     //BIP39 Seed
     public static func createBIP39Seed(mnemonic: String, withPassphrase passphrase: String = "") -> Data {
         precondition(passphrase.count <= 256, "Password too long")

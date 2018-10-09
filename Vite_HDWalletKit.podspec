@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Vite_HDWalletKit'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Vite App HD wallet kit'
   s.homepage         = 'https://github.com/vitelabs/vite-keystore-ios'
   s.description      = <<-DESC
@@ -19,7 +19,5 @@ Vite wallet is a swift framework that you  can  create mnemonic words ,bip publi
   s.dependency 'BigInt', '~> 3.0'
   s.dependency 'CryptoSwift', '~> 0.12.0'
   s.dependency 'TrezorCryptoEd25519WithBlake2b', '~> 0.0.1'
-  s.dependency 'KeychainSwift'
-  s.dependency 'ObjectMapper'
   s.pod_target_xcconfig = { 'SWIFT_OPTIMIZATION_LEVEL' => '-Owholemodule' }
 end
