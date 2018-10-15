@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import CryptoSwift
+
 @testable import Vite_HDWalletKit
 
 class MnemonicTests: XCTestCase {
