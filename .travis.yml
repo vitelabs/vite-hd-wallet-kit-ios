@@ -1,13 +1,15 @@
 language: swift
 osx_image: xcode10
 before_install:
-  - cd Example
-  - bundle install
-  - pod install --repo-update
-  - echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
+- cd Example
+- bundle install
+- pod install --repo-update
+- echo -e "machine github.com\n  login $CI_USER_TOKEN" >> ~/.netrc
 script:
-  - fastlane scan
+- fastlane scan
 env:
   global:
+  - secure: bTzk4DIKCUOC/Eh7jkY2afIO5BeLBcFJ8SE4SrdYdy4DJxfY6fE29foDxZZow3sgsmxE7pnfVT80iu5f99jriQ80eFLLjGV1dId13QGTpCwmicUg/Bu4vzp0eMg1HfnnhJsdLKzN24485TLda6GDOgCuXrlaqE6Y6Jc3nsaolDSY5UxEzPvgUUiNhbAtleM8g5SD08eyQXC+9alItb+nw7Hl4hPkle6tiUT/AaPHmgiBnDnhrq7YKEtehuf1DElzxQim+4LMpgbfSHIocSoD/69KC5Mh+Nn5+UMxY4beqPtN4ZEY59qEQ7UK52ImSt7wkLR6055N/MQED+e+6gfttC9j8gZuwBMknMnDs26bvOV+9LJsNFpNI+32gkRarjFCbK2nyZKBjXYO85PVY6nbrc91+H30YeGvoOI4EcL1DsjNPHu95OWxTRRvHN5Chaq2LBg98dgl+MjPJhEOyLZLOTWXBj8qvrPMJ0ahOkCDn+CcxlYWlcKT2ygsv7DzJYskwgKYOSYmY4K58WwBgFIYf809wo5mxI0NruS2ChmaMcwacSxZelz3hA5CILHHzDnIwgZr9NYqaE86xlQfqvSR0XqV2WvCgwPPEtsUziQChrBLVMAHVhkE7CfLllmuoHOoE0YFdgBJHkss/O8T9d3H7Uwa8zfDJ//U0vCXKsSPaYs=
+  - secure: b7FOaVm0GIvh1lmm21oM6Dbk9XY09b5Zftv6RCvLyTP79GMlOlFQ/x6KIpBfytqkpSV0AOukdCrDLoqUmjBANwT9htqPrd7C3Fa2SEi4YtJCn7Y5gbkSejIdNMozSum5SI0rQhYJ2qQkUBFSdbcXSVit0CdAp+P7dEcJZQMei/BmHtboPW1AE2ICRsn6foFWAf4okmYzWZvbbskOaZ8AhIpqf7cHw+uebPqUrZOlj7Fdo5WbidgqHK1z2OGQCe5FsAcQI8BsL7mlNIxiGAXJcXGGmGreQWQZEb9gSa34+vjFe4jGOOdXrOFaYmApa814LJuQTXaoENJrMEWlJiYrYmMuvZ/Hwf7hInCJZcruMP2oAW0zhfez96ydBJUuiBvx6tJ373OuekC4vwNHL4vLxX+LkRX9oo0B17xpnb66UvdW57wZmBi2+8/ird97+b5UZuxK0YKBDqLn6EjQVejsptexMuaPdpurbqboy/L4IFXWbCX/Y2zQhaKat536UAcq7DU4bMar5WY3RJlzR4QQgVK8olLMSYQE8c+hP9/beVg/4+tJWLXGr79HtVGJY86xzboflBP6MkDIJ++6EfS8UmDOlofZLOem+cs3KXcMMWjMY0ZPHyLTpIJMvZSg3av3Ec/pNbO5kNJVsrAQZVHUIsOl1c0Ix2lZxg9Nl9ukNs0=
 cache:
-  - report.html
+- report.html
