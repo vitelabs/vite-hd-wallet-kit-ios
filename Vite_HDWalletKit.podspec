@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Vite_HDWalletKit'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Vite App HD wallet kit'
   s.homepage         = 'https://github.com/vitelabs/vite-keystore-ios'
   s.description      = <<-DESC
