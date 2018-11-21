@@ -55,46 +55,45 @@ NSMutableData* BTCSHA256(NSData* data) {
 + (NSData*) entropyFromWords:(NSArray*)words wordLists:(NSArray *)wordList {
     if (!words) return nil;
 
-    //Vite only support 24 words
-//    words.count != 12 &&
-//    words.count != 15 &&
-//    words.count != 18 &&
-//    words.count != 21 &&
-    if (words.count != 24) {
+    //Vite only support 12 or 24 words
+    //    words.count != 15 &&
+    //    words.count != 18 &&
+    //    words.count != 21 &&
+    if (words.count == 12 || words.count == 24) {
         // Words count should be between 12 and 24 and be divisible by 13.
-        return nil;
-    }
+        int bitLength = (int)words.count * 11;
 
-    int bitLength = (int)words.count * 11;
+        NSMutableData* buf = [NSMutableData dataWithLength:bitLength / 8 + ((bitLength % 8) > 0 ? 1 : 0)];
 
-    NSMutableData* buf = [NSMutableData dataWithLength:bitLength / 8 + ((bitLength % 8) > 0 ? 1 : 0)];
+        for (int i = 0; i < words.count; i++) {
+            NSString* word = words[i];
+            NSUInteger wordIndex = [wordList indexOfObject:word];
 
-    for (int i = 0; i < words.count; i++) {
-        NSString* word = words[i];
-        NSUInteger wordIndex = [wordList indexOfObject:word];
+            if (wordIndex == NSNotFound) {
+                return nil;
+            }
 
-        if (wordIndex == NSNotFound) {
+            BTCMnemonicIntegerTo11Bits((uint8_t*)buf.mutableBytes, i * 11, (int)wordIndex);
+        }
+
+        NSData* entropy = [buf subdataWithRange:NSMakeRange(0, buf.length - 1)];
+
+        // Calculate the checksum
+        NSUInteger checksumLength = bitLength / 32;
+        NSData* checksumHash = BTCSHA256(entropy);
+        uint8_t checksumByte = (uint8_t) (((0xFF << (8 - checksumLength)) & 0xFF) & (0xFF & ((int) ((uint8_t*)checksumHash.bytes)[0] )));
+
+        uint8_t lastByte = ((uint8_t*)buf.bytes)[buf.length - 1];
+
+        // Verify the checksum
+        if (lastByte != checksumByte) {
             return nil;
         }
 
-        BTCMnemonicIntegerTo11Bits((uint8_t*)buf.mutableBytes, i * 11, (int)wordIndex);
-    }
-
-    NSData* entropy = [buf subdataWithRange:NSMakeRange(0, buf.length - 1)];
-
-    // Calculate the checksum
-    NSUInteger checksumLength = bitLength / 32;
-    NSData* checksumHash = BTCSHA256(entropy);
-    uint8_t checksumByte = (uint8_t) (((0xFF << (8 - checksumLength)) & 0xFF) & (0xFF & ((int) ((uint8_t*)checksumHash.bytes)[0] )));
-
-    uint8_t lastByte = ((uint8_t*)buf.bytes)[buf.length - 1];
-
-    // Verify the checksum
-    if (lastByte != checksumByte) {
+        return entropy;
+    }else{
         return nil;
     }
-
-    return entropy;
 }
 
 @end
