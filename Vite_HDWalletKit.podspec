@@ -16,7 +16,7 @@ Vite wallet is a swift framework that you  can  create mnemonic words ,bip publi
   s.public_header_files = 'Vite-keystore/Classes/Core/Crypto/Bit.h'
 
   s.frameworks = 'UIKit', 'Security'
-  s.dependency 'BigInt', '~> 3.0'
+  s.dependency 'BigInt', '3.1'
   s.dependency 'CryptoSwift', '1.0.0'
   s.dependency 'TrezorCryptoEd25519WithBlake2b', '~> 0.0.1'
 end
