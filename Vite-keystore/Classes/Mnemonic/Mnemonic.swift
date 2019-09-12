@@ -73,16 +73,61 @@ public final class Mnemonic {
     /// Determines if a mnemonic string is valid.
     ///
     /// - Parameter string: mnemonic string
-    /// - Returns: `true` if the string is valid; `false` otherwise.
-    public static func mnemonic_check(_ mnemonicStr: String) -> Bool {
+    /// - Returns: `language` if the string is valid; `nil` otherwise.
+    public static func mnemonic_check(_ mnemonicStr: String) -> MnemonicCodeBook? {
         if mnemonicStr.isEmpty {
-            return false
+            return nil
         }
+
         let mnemonicWordsList = mnemonicStr.components(separatedBy: " ")
 
-        let data = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.english.words)
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.english.words) {
+            return .english
+        }
 
-        return data != nil
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.simplifiedChinese.words) {
+            return .simplifiedChinese
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.traditionalChinese.words) {
+            return .traditionalChinese
+        }
+
+        let chineseCharactersArray = mnemonicStr.reduce([String]()) { (ret, char) -> [String] in
+            var r = ret
+            r.append(String(char))
+            return r
+        }
+
+        if let _ = Bit.entropy(fromWords: chineseCharactersArray, wordLists: MnemonicCodeBook.simplifiedChinese.words) {
+            return .simplifiedChinese
+        }
+
+        if let _ = Bit.entropy(fromWords: chineseCharactersArray, wordLists: MnemonicCodeBook.traditionalChinese.words) {
+            return .traditionalChinese
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.japanese.words) {
+            return .japanese
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.korean.words) {
+            return .korean
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.spanish.words) {
+            return .spanish
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.french.words) {
+            return .french
+        }
+
+        if let _ = Bit.entropy(fromWords: mnemonicWordsList, wordLists: MnemonicCodeBook.italian.words) {
+            return .italian
+        }
+
+        return nil
     }
 }
 
