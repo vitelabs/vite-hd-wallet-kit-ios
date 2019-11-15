@@ -9,7 +9,7 @@
 //https://github.com/trezor/python-mnemonic/tree/master/mnemonic/wordlist
 //助记词密码本，2048个单词的字典做对应
 
-public enum MnemonicCodeBook {
+public enum MnemonicCodeBook: String {
     case english
     case simplifiedChinese
     case traditionalChinese
