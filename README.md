@@ -1,11 +1,11 @@
-# Vite_HDWalletKit
+# vite-hd-wallet-kit-ios
 
 [![Build Status](https://travis-ci.org/vitelabs/Vite_HDWalletKit.svg)](https://travis-ci.org/vitelabs/Vite_HDWalletKit)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Vite_HDWalletKit.svg)](https://img.shields.io/cocoapods/v/Vite_HDWalletKit.svg)
 [![Platform](https://img.shields.io/cocoapods/p/Vite_HDWalletKit.svg?style=flat)](http://cocoadocs.org/docsets/Vite_HDWalletKit)
 
 
-Vite_HDWalletKit  is a swift framework that you  can  create mnemonic words ,bip public key ,address 
+vite-hd-wallet-kit-ios  is a swift framework that you  can  create mnemonic words ,bip public key ,address 
 
 You can check if the mnemonic generation is working right [here](https://iancoleman.io/bip39/).
 
