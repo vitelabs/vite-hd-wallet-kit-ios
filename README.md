@@ -45,4 +45,4 @@ let masterPrivateKey = PrivateKey(seed: seed, network: .main)
 ```
 
 ## License
-Vite_HDWalletKit is released under the [MIT License](https://github.com/essentiaone/HDWallet/blob/develop/LICENSE).
+vite-hd-wallet-kit-ios is released under the [MIT License](https://github.com/essentiaone/HDWallet/blob/develop/LICENSE).
